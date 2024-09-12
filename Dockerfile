@@ -12,9 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-FROM golang:1.22 as foundation
+FROM golang:1.23 as foundation
 
-RUN apt-get update && apt-get upgrade -y && apt autoremove -y
+RUN apt-get update && apt-get upgrade -y && apt autoremove -y &&  apt clean -y && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /build
 COPY go.mod .
