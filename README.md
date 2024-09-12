@@ -1,7 +1,7 @@
 # Warning
 Fork of the [quote service](https://github.com/plombardi89/quote)
 What is done:
-* Upgrade from GOLANG 1.12 to 1.19
+* Upgrade from GOLANG 1.19 to 1.22
 * Fix for GOLANG
 
 | NAME                        | INSTALLED |     FIXED-IN    |   TYPE     |    VULNERABILITY    | SEVERITY |
