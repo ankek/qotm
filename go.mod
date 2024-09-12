@@ -1,6 +1,6 @@
 module github.com/plombardi89/qotm
 
-go 1.19
+go 1.22
 
 require (
 	github.com/go-chi/chi v4.0.2+incompatible
@@ -13,5 +13,5 @@ require (
 require (
 	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
-	google.golang.org/grpc v1.57.2 // indirect
+	google.golang.org/grpc v1.58.3 // indirect
 )
