@@ -2,13 +2,6 @@
 Fork of the [quote service](https://github.com/plombardi89/quote)
 What is done:
 * Upgrade from GOLANG 1.19 to 1.22
-* Fix for GOLANG
-
-| NAME                        | INSTALLED |     FIXED-IN    |   TYPE     |    VULNERABILITY    | SEVERITY |
-| ----------------------------|-----------|-----------------|------------|---------------------|----------|
-|github.com/gorilla/websocket |  v1.4.0   |      1.4.1      |  go-module | GHSA-3xh2-74w9-5vxm | High     |
-|google.golang.org/grpc       |  v1.30.0  |      1.56.3     |  go-module | GHSA-m425-mq94-257g | High     |
-|google.golang.org/grpc       |  v1.30.0  |      1.56.3     |  go-module | GHSA-qppj-fm5r-hxr3 | Medium   |
 
 
 
