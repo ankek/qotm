@@ -1,6 +1,6 @@
 module github.com/plombardi89/qotm
 
-go 1.22
+go 1.23
 
 require (
 	github.com/go-chi/chi v4.0.2+incompatible
