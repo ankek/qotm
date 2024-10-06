@@ -24,6 +24,10 @@ git subtree pull --prefix backend https://github.com/datawire/quote tour-master 
 
 Ex: `docker build -t datawire.io/quote:0.5.0 .`
 
+
+
+docker build -f ./Dockerfile-arm -t datawire.io/quote:0.5.0-arm .
+
 -----
 ## Running the application
 

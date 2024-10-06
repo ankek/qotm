@@ -12,10 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-
 FROM golang:1.23 as foundation
-LABEL authors="AnKek <nobody@knows.email>"
-# RUN apt-get update && apt-get upgrade -y
+# RUN apt-get update && apt-get upgrade -y && apt autoremove -y &&  apt clean -y && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /build
 COPY go.mod .
@@ -29,12 +27,8 @@ FROM foundation as builder
 COPY . .
 RUN make
 
-FROM gcr.io/distroless/base-debian12:latest-amd64 as runtime
-LABEL authors="AnKek <nobody@knows.email>"
-LABEL desc="Simple app "Quote-of-the-day" for monitoring and test cases. Fork of the Quote service https://github.com/plombardi89/quote⁠ \
-GOLANG was upgraded from 1.12 to 1.23.1 All security vulnerabilities are patched and up-to-date for 13 September 2024. \
-\
-!!! Please use it at your own risk !!! "
+FROM gcr.io/distroless/base-debian12:latest-arm64 as runtime
+
 
 COPY --from=builder /build/bin/qotm-linux-amd64 /bin/qotm
 COPY --from=builder /build/certs /certs
